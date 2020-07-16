@@ -18,6 +18,10 @@
                 position: relative;
                 display: flex;
                 margin-bottom:64px;
+                background-image: url('https://devsdata.com/wp-content/uploads/2020/07/highest_caliber_background.svg');
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-position: right;
     
             }
             #highest-caliber .panel-header{
@@ -29,6 +33,7 @@
                 letter-spacing: 0.02em;
                 color: #000000;
                 margin-top: 0;
+                margin-bottom: 74px;
     
             }        
             #highest-caliber .button-hihest span{
@@ -46,7 +51,7 @@
                 border: 2px solid #0332C9;
                 border-radius: 1px;
                 padding:18px 32px 18px 32px;
-                display: inline;
+                /* display: inline; */
                 transition: 0.2s;
                 white-space: pre;
             }           
@@ -61,13 +66,18 @@
                 text-decoration: none;
             }    
             #highest-caliber .left-panel {
-                flex:5;
-                display: flex;
+                width: 60%;
                 flex-direction: column;
                 justify-content: space-between;
+                position: relative;
+                z-index: 5;
             } 
             #highest-caliber .right-panel{
-            flex:4;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                z-index: 1;
             }
             #highest-caliber .right-panel img {
                 max-width:100%;
@@ -80,30 +90,37 @@
                 right: 0;
                 bottom: 0;
                 height: 100%;
+                z-index: 0;
             }
              #highest-caliber .bgc2 {
                 position: absolute;
                 top: 0;
                 left: 0;
-            }       
+                z-index: 0;
+            }
+
+
+            @media only screen and (max-width: 692px) {
+            #highest-caliber .container-highest-caliber{
+                    background-image: none;
+            }                
+            #highest-caliber .left-panel{
+                    width: 100%;
+            }
+            }
         </style>
         </head>
         <body>
         <section id="highest-caliber">
             
-            <div class="container-highest-caliber">
-                <div class="left-panel panel">
-                    <h6 class="panel-header">
-                        DevsData provides engineers of the highest caliber.
-                    </h6>
-                    <a href="https://devsdata.com/the-way-we-are-different/" target="_blank" rel="noopener noreferrer"><div class="button-hihest"><span>The way we are different</span></div></a>
-                </div>
-                <div class="right-panel panel">
-                    <img src="https://mk0devsdatacomipoyv7.kinstacdn.com/wp-content/uploads/2020/06/Group-464.png" alt="A-players" srcset="https://mk0devsdatacomipoyv7.kinstacdn.com/wp-content/uploads/2020/06/Group-464.png 874w, https://mk0devsdatacomipoyv7.kinstacdn.com/wp-content/uploads/2020/06/Group-464-300x276.png 300w, https://mk0devsdatacomipoyv7.kinstacdn.com/wp-content/uploads/2020/06/Group-464-768x706.png 768w" sizes="(max-width: 874px) 100vw, 874px">
-                </div>
-            <img src="https://mk0devsdatacomipoyv7.kinstacdn.com/wp-content/uploads/2020/07/background-serious-about-security-2.svg" alt="bcg1" class="bgc1">
-            <img src="https://mk0devsdatacomipoyv7.kinstacdn.com/wp-content/uploads/2020/07/background-serious-about-security.svg" alt="bcg2" class="bgc2">
+        <div class="container-highest-caliber">
+            <div class="left-panel panel">
+                <h6 class="panel-header">
+                    DevsData provides engineers of the highest caliber.
+                </h6>
+                <a href="https://devsdata.com/the-way-we-are-different/" target="_blank" rel="noopener noreferrer"><div class="button-hihest"><span>The way we are different</span></div></a>
             </div>
+        </div>
     
         </section>
 </body>
